@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3');
+            background-size:cover;
+            background-position:center;
+            background-attachment:fixed;
+            min-height:100vh;
+            padding:20px;
+        }
+
+        /* Flexbox Navigation */
+        header{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            background-color:rgba(0,102,204,0.9);
+            padding:20px;
+            border:2px solid white;
+            border-radius:15px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.3);
+            margin-bottom:25px;
+        }
+
+        header h1{
+            color:white;
+        }
+
+        nav{
+            display:flex;
+            gap:15px;
+        }
+
+        nav a{
+            text-decoration:none;
+            color:white;
+            font-weight:bold;
+        }
+
+        nav a:hover{
+            text-decoration:underline;
+        }
+
+        /* CSS Grid Layout */
+        .contact-container{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:20px;
+        }
+
+        .card{
+            background:rgba(255,255,255,0.9);
+            padding:25px;
+            border:2px solid #0066cc;
+            border-radius:15px;
+            box-shadow:0 5px 12px rgba(0,0,0,0.2);
+        }
+
+        .card h2{
+            color:#0066cc;
+            margin-bottom:15px;
+        }
+
+        .info p{
+            margin:10px 0;
+            color:#333;
+        }
+
+        form{
+            display:flex;
+            flex-direction:column;
+            gap:15px;
+        }
+
+        input,
+        textarea{
+            padding:12px;
+            border:2px solid #0066cc;
+            border-radius:10px;
+            outline:none;
+        }
+
+        button{
+            background-color:#0066cc;
+            color:white;
+            border:none;
+            padding:12px;
+            border-radius:10px;
+            cursor:pointer;
+            box-shadow:0 3px 8px rgba(0,0,0,0.2);
+        }
+
+        button:hover{
+            background-color:#004d99;
+        }
+
+        footer{
+            margin-top:25px;
+            text-align:center;
+            background-color:rgba(0,102,204,0.9);
+            color:white;
+            padding:15px;
+            border:2px solid white;
+            border-radius:15px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        @media(max-width:768px){
+            header{
+                flex-direction:column;
+                gap:15px;
+            }
+
+            .contact-container{
+                grid-template-columns:1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Contact Me</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="courses.html">Courses</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="contact-container">
+
+        <div class="card info">
+            <h2>Contact Information</h2>
+
+            <p><strong>Name:</strong> Atueyi Zel</p>
+            <p><strong>Department:</strong> Medicine and Surgery</p>
+            <p><strong>University:</strong> Madonna University, Elele</p>
+            <p><strong>Email:</strong> atueyi@example.com</p>
+            <p><strong>Phone:</strong> +234 XXX XXX XXXX</p>
+        </div>
+
+        <div class="card">
+            <h2>Send a Message</h2>
+
+            <form>
+                <input type="text" placeholder="Enter your name" required>
+
+                <input type="email" placeholder="Enter your email" required>
+
+                <textarea rows="6" placeholder="Type your message here..." required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Atueyi Zel | Contact Page</p>
+    </footer>
+
+</body>
+</html>
