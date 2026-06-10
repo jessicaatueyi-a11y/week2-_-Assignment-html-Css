@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Medical Student Portfolio</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background-image:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
+            background-size:cover;
+            background-position:center;
+            background-attachment:fixed;
+            min-height:100vh;
+            padding:20px;
+        }
+
+        /* Flexbox Navigation */
+        header{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            background:rgba(30,144,255,0.9);
+            color:white;
+            padding:20px;
+            border:2px solid white;
+            border-radius:15px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.3);
+            margin-bottom:20px;
+        }
+
+        .logo{
+            font-size:28px;
+            font-weight:bold;
+        }
+
+        nav{
+            display:flex;
+            gap:20px;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        nav a:hover{
+            text-decoration:underline;
+        }
+
+        /* Hero Section */
+        .hero{
+            background:rgba(255,255,255,0.9);
+            padding:30px;
+            text-align:center;
+            border:2px solid #1e90ff;
+            border-radius:15px;
+            box-shadow:0 4px 12px rgba(0,0,0,0.2);
+            margin-bottom:20px;
+        }
+
+        .hero h1{
+            color:#1e90ff;
+            margin-bottom:10px;
+        }
+
+        /* CSS Grid Layout */
+        .container{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:20px;
+        }
+
+        .card{
+            background:rgba(255,255,255,0.9);
+            padding:20px;
+            border:2px solid #1e90ff;
+            border-radius:15px;
+            box-shadow:0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .card h2{
+            color:#1e90ff;
+            margin-bottom:10px;
+        }
+
+        .card img{
+            width:100%;
+            height:200px;
+            object-fit:cover;
+            border-radius:10px;
+            border:2px solid #1e90ff;
+            margin-bottom:10px;
+        }
+
+        .resources a{
+            display:block;
+            margin:10px 0;
+            color:#1e90ff;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        .resources a:hover{
+            text-decoration:underline;
+        }
+
+        footer{
+            margin-top:20px;
+            text-align:center;
+            background:rgba(30,144,255,0.9);
+            color:white;
+            padding:15px;
+            border:2px solid white;
+            border-radius:15px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        @media(max-width:768px){
+            header{
+                flex-direction:column;
+                gap:15px;
+            }
+
+            nav{
+                flex-wrap:wrap;
+                justify-content:center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Medical Student Portfolio</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="courses.html">Courses</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>
+            My name is Atueyi Zel. I am a 300-level Medicine and Surgery
+            student at Madonna University, Elele.
+        </p>
+    </section>
+
+    <main class="container">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f"
+                 alt="Medical students learning anatomy">
+
+            <h2>Medicine</h2>
+            <p>
+                Studying medicine equips students with knowledge and skills
+                to improve healthcare and save lives.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b"
+                 alt="Hospital clinical training">
+
+            <h2>Clinical Training</h2>
+            <p>
+                Practical clinical experience is essential in becoming
+                a competent medical doctor.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1532187643603-ba119ca4109e"
+                 alt="University lecture hall">
+
+            <h2>Education</h2>
+            <p>
+                Continuous learning and research help medical professionals
+                stay updated with modern healthcare practices.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
+                 alt="Student studying with a laptop">
+
+            <h2>Technology</h2>
+            <p>
+                Technology supports medical education, research,
+                diagnosis, and patient care.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216"
+                 alt="Communication and networking">
+
+            <h2>Communication</h2>
+            <p>
+                Effective communication is a key skill for healthcare
+                professionals.
+            </p>
+        </div>
+
+        <div class="card resources">
+            <h2>Useful Medical Resources</h2>
+
+            <a href="https://www.who.int" target="_blank">
+                World Health Organization (WHO)
+            </a>
+
+            <a href="https://www.nih.gov" target="_blank">
+                National Institutes of Health (NIH)
+            </a>
+
+            <a href="https://www.mayoclinic.org" target="_blank">
+                Mayo Clinic
+            </a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Atueyi Zel | Medicine & Surgery Portfolio</p>
+    </footer>
+
+</body>
+</html>
